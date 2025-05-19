@@ -7,7 +7,7 @@ import './style.css'
 import { createClient } from '@supabase/supabase-js'
 import * as ical from 'ical.js';
 
-const supabase = createClient('your supabase url', 'your supabase anon key');
+const supabase = createClient('https://wxllnzdbcwzydikbqvvu.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind4bGxuemRiY3d6eWRpa2JxdnZ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDEwMTQ1ODIsImV4cCI6MjA1NjU5MDU4Mn0.Z428Q_P28lWSxu57_6F90n7pkCZVOSRfLigxqHHjCjM')
 
 function uploadFile(image: string) {
   // this is instead of the fetch call
@@ -95,7 +95,7 @@ function uploadFile(image: string) {
               // copy the link to the clipboard
               const id = data[0].id;
               const textArea = document.createElement('textarea');
-              textArea.value = `https://YOURPROJECTREF.supabase.co/functions/v1/download_cal/${id}`;
+              textArea.value = `https://wxllnzdbcwzydikbqvvu.supabase.co/functions/v1/download_cal/${id}`;
               document.body.appendChild(textArea);
               textArea.select();
               document.execCommand('copy');
