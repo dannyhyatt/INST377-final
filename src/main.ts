@@ -7,9 +7,11 @@ import './style.css'
 import { createClient } from '@supabase/supabase-js'
 import * as ical from 'ical.js';
 
+const supabase = createClient('your supabase url', 'your supabase anon key');
 
 function uploadFile(image: string) {
-  const supabase = createClient('https://wxllnzdbcwzydikbqvvu.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind4bGxuemRiY3d6eWRpa2JxdnZ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDEwMTQ1ODIsImV4cCI6MjA1NjU5MDU4Mn0.Z428Q_P28lWSxu57_6F90n7pkCZVOSRfLigxqHHjCjM')
+  // this is instead of the fetch call
+  // prof said it was OK: https://discord.com/channels/1332154089152188416/1332154089152188422/1373822381734367343
   supabase.functions.invoke('gen_calendar', { body: JSON.stringify({ "image": image }) }).then(({ data, error }) => {
     if(error) {
       console.error('error', error);
@@ -79,6 +81,29 @@ function uploadFile(image: string) {
           a.click();
           document.body.removeChild(a);
           URL.revokeObjectURL(url);
+        });
+      }
+
+      const shareButton = document.getElementById('share-button');
+      if (shareButton) {
+        shareButton.addEventListener('click', () => {
+          supabase.functions.invoke('share_cal', { body: JSON.stringify({ "calendar": data.calendar }) }).then(({ data, error }) => {
+            if(error) {
+              console.error('error', error);
+            }
+            if(data) {
+              // copy the link to the clipboard
+              const id = data[0].id;
+              const textArea = document.createElement('textarea');
+              textArea.value = `https://YOURPROJECTREF.supabase.co/functions/v1/download_cal/${id}`;
+              document.body.appendChild(textArea);
+              textArea.select();
+              document.execCommand('copy');
+              document.body.removeChild(textArea);
+              alert('Link copied to clipboard');
+              
+            }
+          })
         });
       }
     }

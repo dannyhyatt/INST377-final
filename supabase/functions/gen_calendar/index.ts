@@ -13,8 +13,8 @@ const corsHeaders = {
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 }
 
-const endpoint = "api-endpoint";
-const apiKey = "api-key";
+const endpoint = "openaiEndpoint"; // This must match your OpenAI endpoint
+const apiKey = "supersecret";
 
 // Required Azure OpenAI deployment name and API version
 // const apiVersion = "2025-01-01-preview";
