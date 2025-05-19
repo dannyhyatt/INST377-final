@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SS2Cal</title>
+  </head>
+  <body>
+    <header>
+      <h1>SS2Cal</h1>
+      <span class="nav-list">
+        <a href="/home.html">Home</a>
+        <a href="/about.html">About</a>
+      </span>
+      <h3>Import any screenshot into a digital calendar</h3>
+    </header>
+    <main>
+      <div id="file-upload">
+        <input type="file" id="file-input" hidden />
+        Click here to upload a screenshot or drag and drop it here
+      </div>
+      <div id="file-preview">
+        <span>
+          <strong>Preview:</strong>
+          <button id="download-button">Download</button>
+        </span>
+        <div id="calendar"></div>
+      </div>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SS2Cal</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+    <style>
+      main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+      }
+      #get-started {
+        text-decoration: none;
+        color: white;
+        background-color: #007bff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 1.2em;
+        transition: background-color 0.3s ease;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>SS2Cal</h1>
+      <span class="nav-list">
+        <a href="/home.html">Home</a>
+        <a href="/about.html">About</a>
+      </span>
+    </header>
+    <main>
+      <h2>The best way to import your <span id="typing-space"></span></h2>
+      <br>
+      <a href="/" id="get-started">Get Started</a>
+    </main>
+
+    <script type="module" src="/src/home.ts"></script>
+  </body>
+</html>

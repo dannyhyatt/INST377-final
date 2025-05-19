@@ -1,0 +1,32 @@
+{
+  "name": "assignment-1",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@event-calendar/core": "^4.3.0",
+    "@types/event-calendar__core": "^3.12.0",
+    "@types/ical": "^0.8.3",
+    "typescript": "~5.7.2",
+    "vite": "^6.2.0"
+  },
+  "dependencies": {
+    "@fullcalendar/core": "^6.1.17",
+    "@fullcalendar/daygrid": "^6.1.17",
+    "@fullcalendar/list": "^6.1.17",
+    "@fullcalendar/rrule": "^6.1.17",
+    "@fullcalendar/timegrid": "^6.1.17",
+    "@jacobmischka/icalendar2fullcalendar": "^1.0.1",
+    "@supabase/supabase-js": "^2.49.1",
+    "axios": "^1.8.2",
+    "ical.js": "^2.1.0",
+    "openai": "^4.86.2",
+    "sharer.js": "^0.5.3",
+    "typed.js": "^2.1.0"
+  }
+}

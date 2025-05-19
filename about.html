@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SS2Cal</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+    <style>
+      main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+      }
+      #get-started {
+        text-decoration: none;
+        color: white;
+        background-color: #007bff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 1.2em;
+        transition: background-color 0.3s ease;
+      }
+      .nav-list {
+        display: flex;
+        gap: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>SS2Cal</h1>
+      <span class="nav-list">
+        <a href="/home.html">Home</a>
+        <a href="/about.html">About</a>
+      </span>
+    </header>
+    <main>
+      
+      <h2>Frequently Asked Questions</h2>
+
+      <h3>What is SS2Cal?</h3>
+      <p>
+        SS2Cal is a tool that allows you to import any screenshot into a digital calendar. It uses AI to recognize the texts and layouts in your screenshots and convert them into a digital calendar format. This makes it easy to keep track of your events, appointments, and important dates without the hassle of manual entry.
+      </p>
+
+      <h3>Is SS2Cal Secure?</h3>
+      <p>
+        Probably
+      </p>
+
+      <h3>How do I import a calendar?</h3>
+      <p>
+        To import a calendar, simply upload your screenshot using the upload button on the home page. SS2Cal will process the image and generate a digital calendar for you.
+        <br>
+        After the calendar is generated, you can download it as the standard .ics file format, which is compatible with most calendar applications.
+        <br>
+        Upload it to Google Calendar, Outlook, or any other calendar app that supports .ics files.
+      </p>
+
+      <h3>Are these questions really <i>frequently asked</i>?</h3>
+      <p>
+        No, there is not anyone who has asked a single question about this.
+      </p>
+
+      <br>
+      <a href="/" id="get-started">Use SS2Cal</a>
+    </main>
+
+    <script type="module" src="/src/home.ts"></script>
+  </body>
+</html>
